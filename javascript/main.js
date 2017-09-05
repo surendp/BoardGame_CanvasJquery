@@ -79,8 +79,8 @@ $(function(){
 		var y_coor = e.clientY;
 		
 		// print in console
-		//console.log(x_coor, y_coor);
-		if(orientation == "portrait"){
+		//console.log(canvas.getOrientation());
+		if(canvas.getOrientation() == "portrait"){
 			x = x_coor;
 			x_coor =  y_coor;
 			y_coor =  -1 * x + gameArea.canvas.height;
@@ -110,15 +110,17 @@ $(function(){
 		
 		if(orientation == "portrait"){
 			orientation = "landscape";
+			canvas.setOrientation(orientation);
 		}else{
 			orientation = "portrait";
+			canvas.setOrientation(orientation);
 		}
 		
 		// re-calculating the game area
 		canvas.loadGame();
 		
 		// re-calculating  the game variables
-		variablesInitiator.initiateVariables();
+		variablesInitiator.initiateVariables(gameArea);
 		
 		// drawing the board after recalculation
 		board.draw(gameArea);

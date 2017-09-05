@@ -27,12 +27,12 @@ class Canvas{
 		if(height > width){
 			this.gameArea.start( height, width);
 			$("#main").addClass("can");
-			this.Orientation = "portrait";
+			this.orientation = "portrait";
 		}
 		else{
 			this.gameArea.start( width, height);
 			$("#main").removeClass("can");
-			this.Orientation = "landscape";
+			this.orientation = "landscape";
 		}
 	}
 	
@@ -44,6 +44,11 @@ class Canvas{
 	// get orientation
 	getOrientation(){
 		return this.orientation;
+	}
+	
+	// set orientation
+	setOrientation(orientation){
+		this.orientation = orientation;
 	}
 	
 }
