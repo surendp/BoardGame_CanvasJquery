@@ -14,15 +14,15 @@
 				
 		
 		initSections(section1Values, section2Values, section3Values){
-				fillSection(this.section[0], section1Values);
-				fillSection(this.section[1], section2Values);
-				fillSection(this.section[2], section3Values);
+				this.fillSection(this.section[0], section1Values);
+				this.fillSection(this.section[1], section2Values);
+				this.fillSection(this.section[2], section3Values);
 
 		}
 		
 		updateSections(section1Values, section3Values){
-			fillSection(this.section[0], section1Values);
-			fillSection(this.section[2], section3Values);
+			this.fillSection(this.section[0], section1Values);
+			this.fillSection(this.section[2], section3Values);
 		}
 		
 	
@@ -51,19 +51,19 @@
 			
 		}
 		
-
-	}
-	
-	//  funciton to update the values of the cards of the given section
-	function fillSection(section, values){
-		var cards = section.getCards();
-		for(var i = 0; i < values.length; i ++){
-			var index = cards[i].getIndex();
-			cards[i].setValue(values[index]);
-			cards[i].setSection(section.getName());
-			
-			//console.log(cards[i].getValue());
+		//  funciton to update the values of the cards of the given section
+		fillSection(section, values){
+			var cards = section.getCards();
+			for(var i = 0; i < values.length; i ++){
+				var index = cards[i].getIndex();
+				cards[i].setValue(values[index]);
+				cards[i].setSection(section.getName());
+				
+				//console.log(cards[i].getValue());
+			}
 		}
 	}
+	
+
 	
 	

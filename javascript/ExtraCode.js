@@ -293,3 +293,39 @@
 		
 	}
  */
+
+ 
+	/* 
+	 // creating game object
+	var canvas = new Canvas();
+	 
+	// game area to draw  shapes
+	// associative array 
+	// global variable
+	gameArea = canvas.getGameArea();
+	
+	
+	//Initiate the variable initiating object
+	var variablesInitiate = new VariablesInitiator();
+	
+
+	
+
+	// function to initiate the game
+	function initGame(){
+		// calculating the game area
+		canvas.loadGame();
+		
+		// initiating  the game variables
+		variablesInitiate.initiateVariables();
+		
+		// initiating  the game classes
+		var gameInitiate = new GameObjectsInitiator(player1Name, player2Name, middleSection, p1_array, p2_array);
+		board = gameInitiate.initiateGameObjects();
+		
+		// draw the board
+		board.draw(gameArea);
+	
+	}
+	 */
+	 

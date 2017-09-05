@@ -4,44 +4,15 @@
 $(function(){
 	
 	// orientation 
-	var currentOrientation = "";
-	
-	 // creating game object
-	var canvas = new Canvas();
-	 
-	// game area to draw  shapes
-	// associative array 
-	// global variable
-	gameArea = canvas.getGameArea();
-	
-	
-	//Initiate the variable initiating object
-	var variablesInitiate = new VariablesInitiator();
+	var orientation = "";
 	
 
-	
 	// function to draw the board
 	function drawBoard(){
 		// draw the board
 		board.draw(gameArea);
 	}
 	
-	// function to initiate the game
-	function initGame(){
-		// calculating the game area
-		canvas.loadGame();
-		
-		// initiating  the game variables
-		variablesInitiate.initiateVariables();
-		
-		// initiating  the game classes
-		var gameInitiate = new GameObjectsInitiator(player1Name, player2Name, middleSection, p1_array, p2_array);
-		board = gameInitiate.initiateGameObjects();
-		
-		// draw the board
-		board.draw(gameArea);
-	
-	}
 	
 	// function to update the game status
 	function updateGame(){
@@ -82,9 +53,20 @@ $(function(){
 	p2_array.reverse();
 	p1_array.reverse();
 
-	// initiate game 
 
-	initGame();
+	// initiate game engine
+	 var gameEngine = new GameEngine(player1Name, player2Name, middleSection, p1_array, p2_array, orientation);
+	  board = gameEngine.start();
+	 
+	 // get canvas ,game area and orientation
+	 var canvas = gameEngine.getCanvas();
+	  gameArea = canvas.getGameArea();
+	  orientation = canvas.getOrientation();
+	 
+	 // get variable Initiator
+	 var variablesInitiator = gameEngine.getVariablesInitiator();
+	
+	
 	
 	//initiate game updater 
 	var gameUpdater = new UpdateGame(player1Name, player2Name);
@@ -98,7 +80,7 @@ $(function(){
 		
 		// print in console
 		//console.log(x_coor, y_coor);
-		if(currentOrientation == "portrait"){
+		if(orientation == "portrait"){
 			x = x_coor;
 			x_coor =  y_coor;
 			y_coor =  -1 * x + gameArea.canvas.height;
@@ -126,17 +108,17 @@ $(function(){
 	// re-calculating the canvas size
 	$(window).on("orientationchange", function(){
 		
-		if(currentOrientation == "portrait"){
-			currentOrientation = "landscape";
+		if(orientation == "portrait"){
+			orientation = "landscape";
 		}else{
-			currentOrientation = "portrait";
+			orientation = "portrait";
 		}
 		
 		// re-calculating the game area
 		canvas.loadGame();
 		
 		// re-calculating  the game variables
-		variablesInitiate.initiateVariables();
+		variablesInitiator.initiateVariables();
 		
 		// drawing the board after recalculation
 		board.draw(gameArea);

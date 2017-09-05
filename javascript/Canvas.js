@@ -1,19 +1,11 @@
 
 class Canvas{
 	
-	getGameArea(){
-		return gameArea();
-	}	
-	
-	loadGame(){
-		loadGame();
-	}
-}
-
-function gameArea(){
+	constructor(orientation){
+		
 		// creating the game area 
 		// associative array is used
-		var gameArea = {
+		this.gameArea = {
 			canvas : document.getElementById("main"),
 			start : function(width, height){
 				this.canvas.width = width;
@@ -21,24 +13,38 @@ function gameArea(){
 				this.context = this.canvas.getContext("2d");
 			}
 		}
+		
+		this.orientation = orientation;
+	}
+	
 
-		return gameArea;
-}
-
-// load the game screen
-function loadGame(){		
+	// load the game screen
+	loadGame(){
 		// size of body
 		var height = window.innerHeight;
 		var width  = window.innerWidth;
 		
 		if(height > width){
-			gameArea.start( height, width);
+			this.gameArea.start( height, width);
 			$("#main").addClass("can");
-			currentOrientation = "portrait";
+			this.Orientation = "portrait";
 		}
 		else{
-			gameArea.start( width, height);
+			this.gameArea.start( width, height);
 			$("#main").removeClass("can");
-			currentOrientation = "landscape";
+			this.Orientation = "landscape";
 		}
+	}
+	
+	// get game area
+	getGameArea(){
+		return this.gameArea;
+	}	
+	
+	// get orientation
+	getOrientation(){
+		return this.orientation;
+	}
+	
 }
+
