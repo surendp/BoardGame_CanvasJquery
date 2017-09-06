@@ -1,10 +1,11 @@
 
 class GameInitiator{
 	
-	constructor(canvas, variablesInitiator, gameObjectsInitiator){
+	constructor(canvas, variablesInitiator, gameObjectsInitiator, statusBar){
 		this.canvas = canvas;
 		this.variablesInitiator = variablesInitiator;
 		this.gameObjectsInitiator = gameObjectsInitiator;
+		this.statusBar = statusBar;
 		this.board = null;
 	}
 	
@@ -17,6 +18,11 @@ class GameInitiator{
 		// initiating  the game variables
 		this.variablesInitiator.initiateVariables(this.canvas.getGameArea());
 		
+		// set status bar length and height
+		this.statusBar.setLength(this.canvas.getGameArea().canvas.width);
+		this.statusBar.setHeight(statusBar);
+		this.statusBar.draw(this.canvas.getGameArea());
+
 		// initiating  the game classes
 		this.board = this.gameObjectsInitiator.initiateGameObjects();		
 		

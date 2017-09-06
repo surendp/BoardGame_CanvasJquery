@@ -36,8 +36,8 @@ $(function(){
 	}
 
 	// defining players default name
-	var player1Name = "p1";
-	var player2Name = "p2";
+	var player1Name = "upperPlayer";
+	var player2Name = "lowerPlayer";
 	var middleSection = "mid";
 	
 	// defining the arrays for players
