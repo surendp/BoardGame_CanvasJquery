@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+
+		<link rel="stylesheet" type="text/css" href="css/pages.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src = "javaScript/start.js"></script>
+
+		<script src="http://users.metropolia.fi/~surendp/MobileProgramming/jquery-2.1.1.min.js"></script>
+		<title> Board Game </title>
+	</head>
+	<body>
+		<div class = "frame container-fluid">	
+		
+			<div class = "home">
+				
+				<div class="col-sm-12 col-xs-12"><img src= "images/riddance.png" class="img-responsive" id="form"></div>
+				
+			</div>
+			
+			<div class = "form">
+				
+				<label>Player One:</label><br>
+				<input type="text" color="black" id="p1"><br><br>
+				<label>Player Two:</label><br>
+				<input type="text" id="p2"> <br><br>
+				
+			</div>
+			
+			<div class = "rules">
+				
+				<p id="rules_head"> Game Play: </p><br>
+			
+				<ul>
+					<li> The game is divided in three different rows: first player area, void and second player area </li>
+					<li> The goal is to clear your area from all the cards.  </li>
+					<li> Players take turn to press on their cards. </li>
+					<li> When a numbered card is pressed, the numbers are distributed one each on the other cards/spaces in anti-clockwise order </li>
+					<li> One count is lost every time the numbers have to pass through the ring, to get to opponent's area. </li>
+					<li> The game has lot of area for thinking and stratigizing </li>
+					<li> Happy Gaming :D  </li>
+				</ul>
+				
+			</div>
+			
+			<div class="row buttons">
+					<div class="col-sm-4 col-xs-4"> <img src= "images/rules.png" class="img-responsive" id="b_rules"> </div>
+					<div class="col-sm-4 col-xs-4"> <img src= "images/home.png" class="img-responsive" id="b_home"> </div>
+					<div class="col-sm-4 col-xs-4"> <img src= "images/start.png" class="img-responsive" id="b_start"> </div>
+					<div class="col-sm-4 col-xs-4"> <img src= "images/play.png" class="img-responsive" id="b_form"> </div>
+					<div class="col-sm-4 col-xs-4"> <img src= "images/exit.png" class="img-responsive" id="b_exit"> </div>
+					
+			</div>
+		
+		</div>
+	</body>
+</html>

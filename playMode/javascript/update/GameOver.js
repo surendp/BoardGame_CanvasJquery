@@ -15,9 +15,11 @@ class GameOver{
 		if(sum_p1 == 0 || sum_p2 == 0){
 			
 			if(sum_p1 == 0){
+				localStorage.winner = this.player1Name;
 				console.log(this.player1Name + " wins");
 			}
 			else{
+				localStorage.winner = this.player2Name;
 				console.log(this.player2Name + " wins");	
 			}
 			

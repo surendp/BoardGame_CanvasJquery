@@ -36,8 +36,8 @@ $(function(){
 	}
 
 	// defining players default name
-	var player1Name = "upperPlayer";
-	var player2Name = "lowerPlayer";
+	var player1Name = localStorage.firstPlayer;
+	var player2Name = localStorage.secondPlayer;
 	var middleSection = "mid";
 	
 	// defining the arrays for players

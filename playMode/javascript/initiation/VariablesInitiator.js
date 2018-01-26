@@ -1,9 +1,12 @@
 
 class VariablesInitiator{	
 	
+	
+	
 	initiateVariables(gameArea){
 		initVariables(gameArea);
 	}
+	
 	
 }
 
