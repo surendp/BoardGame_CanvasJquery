@@ -1,13 +1,16 @@
 
 class VariablesInitiator{	
 	
-	initiateVariables(){
-		initVariables();
+	
+	
+	initiateVariables(gameArea){
+		initVariables(gameArea);
 	}
+	
 	
 }
 
-function initVariables(){		
+function initVariables(gameArea){		
 
 		// canvas 
 		 x = gameArea.canvas;

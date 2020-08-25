@@ -25,6 +25,15 @@
 			this.y = y;
 		}
 		
+		setLength(length){
+			this.length = length;
+		}
+		
+		setBreadth(breadth){
+			this.breadth = breadth;
+		}
+		
+		
 		getLength(){
 			return this.length;
 		}

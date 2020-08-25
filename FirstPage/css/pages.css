@@ -1,0 +1,75 @@
+body, html {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	background-image: url(../images/fabric.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.frame {
+	width: 94%;
+	min-height: 91%;
+	margin: 1.5%;
+	margin-top: 2.5%;
+	border: 6px solid;
+	border-color: #82261d;	
+}
+@media (orientation: portrait){	
+	.frame {
+	margin-top:7%;
+	padding-top: 20%; 
+	}
+	.home {
+		margin-top:30%;
+	}
+}
+
+img {
+	display: block;
+	width: 75%;
+	height :auto;
+	float: center;
+	margin:auto;
+}
+
+.buttons img {
+	width: 45%;
+	margin-bottom:-5%;
+}
+
+.form {
+	width: 87%; 
+	margin : auto;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	padding:4%;
+    background-image: url(../images/formbg.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;	
+	border: 6px solid;
+	border-image-source: url(../images/frame.png);    
+	border-image-slice: 8;	
+    text-align: center;
+	color: gray;
+	font-weight: bold;
+	font-size: 19px;	
+}
+
+#rules_head {
+	 color: #82261d;
+	 font-weight: bold;
+	 font-size: 32px;
+	 margin:auto;
+ }
+ 
+  ul {
+	color: #ffff00;
+	font-size: 15px;
+  }
+
+  
+  
+
