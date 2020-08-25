@@ -56,7 +56,7 @@ $(function(){
 		localStorage.firstPlayer = pl1;
 		localStorage.secondPlayer = pl2;
 
-		window.location = '../playMode/index.html';
+		window.location = './playMode/index.html';
 	});
 	
 	$("#b_exit").click(function(){
